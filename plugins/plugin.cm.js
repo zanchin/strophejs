@@ -158,6 +158,9 @@ Strophe.addConnectionPlugin('connectionmanager', {
             if(this.config.autoResend){
                 this.resendAll();
             }
+            
+            // re-enable auto reconnect
+            this.config.autoReconnect = true;
         }
         else if(status == Strophe.Status.DISCONNECTING){
             if(condition == "logout"){
